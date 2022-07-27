@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2? family = Bebas + Neue & display = swap');
+/*Fonte do google*/
+
+@font-face { /*Fonte baixada*/
+    font-family:'Android';
+    src: url('fonte/IDroid\ Bold.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root{ /*variável */
+    --claro: #C0D6B9;
+    --paragrafo:rgb(207, 247, 207);
+    --escuro: #145224;
+    --dentro:#B0EBBF;
+    --letra:#2D5236;
+    --link:rgb(34, 124, 75);
+    --escurao: #0f411d;
+    --degrade1:#2d7939d2;
+    --degrade2:#1d7e27;
+    --degrade3:#0e441e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursiva;
+    --fonte-android: 'Android', cursiva;
+}
+
+*{    /*Quer dizer global*/
+
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    color: white;
+    background-image: linear-gradient(to top,var(--degrade3), var(--degrade2),var(--degrade1));
+    text-align: center;
+    font-family: var(--fonte-destaque);
+    min-height: 150px;
+    padding-top: 40px ;
+}
+
+header > h1{
+    font-family: var(--fonte-destaque); /*fonte*/
+    margin-bottom: 20px; /*Margem de baixo*/
+    font-size: 1.5em; /*tamanho da fonte*/
+    text-shadow: 2px 2px 0px rgb(27, 26, 26); /*sombra*/
+}
+
+header > p{
+    text-align: center;
+    font-family: var(--fonte-padrao);
+    font-size: 1.0em;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgb(27, 26, 26);
+    margin-bottom: 20px;
+
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+h2{
+    font-size: 1em;
+}
+
+nav{
+    text-align: left;
+    padding: 10px;
+    background-color: var(--escurao);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.719);
+    font-size: 0.9em;
+    
+}
+
+nav > a{
+    color: white;
+    padding: 10px;
+    text-decoration: none; /*perde o sublinhado*/
+    font-weight: bold; /*negrito*/
+    border-radius: 5px;
+    transition-duration: 0.5s; /*quando passa o mouser demorar*/
+}
+
+nav > a:hover {  /*quando passa o mouser*/
+    background-color: var(--link);
+    color: black;
+}
+
+.principal{
+    color:var(--letra);
+    text-align: center;
+    font-family: var(--fonte-android);
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+body{
+    background-color:var(--claro);
+    border-radius: 20px;
+
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after{ /*depois dele*/
+    content: '\00A0\1F517'; /*Sinal apos o link externo para ficar bonitinho*/
+}
+
+main{
+    background-color: white;
+    border-bottom-left-radius: 10px; /*Fica arredondado só na parte de baixo direito/esquerdo*/
+    border-bottom-right-radius: 10px;
+    
+    min-width: 280px; /*Tela celular*/
+    max-width: 800px; /*Tela grande (flexivel)*/
+    margin: auto;
+    margin-bottom: 30px; /*Não ficar colado com rodapé (margim em baixo)*/
+    padding: 20px; /*Distancia o conteúdo da berada*/
+    box-shadow: 0px 0px 10px rgb(48, 45, 45);
+    
+}
+
+main p{
+    margin: 15px 0px 15px 0px;
+    text-align: justify;   
+    text-indent: 30px; /*paragráfo*/
+    font-size: 1em;
+    line-height: 1.5em ; /*altura da linha*/
+}
+
+main img { /*Colocar imagem no meio*/
+    display: block; /*imagem no centro sozinha (tipo de caixa)*/
+    width: 100%; /*largura (ocupa todo espaço*/
+}
+
+main strong{
+    color: var(--escuro);
+    font-weight: bolder;
+    padding: 2px 2px;
+}
+
+main a{
+    text-decoration: none; /*perde o sublinhado*/
+    font-weight: bold;
+    color: var(--letra);
+    background-color: var(--claro);
+    border-radius: 0.4em; 
+    padding: 2px 6px;
+}
+
+main a:hover{ /*quando passa o mouser em cima*/
+    text-decoration: underline; /*ficar sublinhado*/
+}
+
+main h2{
+    font-family: var(--fonte-android);
+    font-size: 1em;
+    font-weight: lighter;
+    color: var(--letra);
+    background-image: linear-gradient(to right, var(--paragrafo), transparent); /*começa com a cor e vai ficando transparente*/
+    text-indent: 8px; /*paragráfo*/
+
+}
+
+div.video{
+    background-color: var(--degrade3);
+    padding: 20px;
+    margin: 0px -20px 30px -20px;
+    padding-bottom: 59%;
+    position: relative; /*posição relativo*/
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+img.pequena{
+    max-width: 350px;
+    display: block; /*no meio*/
+    margin: auto;
+}
+
+h3{
+    font-size: 1em;
+    color: var(--letra);
+    background-color: var(--paragrafo);
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /*Margem negativa permite que o paragrafo saia para fora */ 
+    /*Em cima, na direita, em baixo, esquerda*/
+    border-radius: 10px 10px 0px 0px;
+    
+}
+
+aside{
+    background-color:var(--dentro);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border-radius: 3px 3px 8px rgb(0, 0, 0);
+}
+
+aside > ul{
+    list-style-type: '\2714\00A0'; /*Muda a bolinha copiando o codigo*/
+    list-style-position: inside; /*Colocar as bolinhas dentro do paragrafo*/
+    columns: 2; /*dividir a lista em 2*/
+}
+
+
+footer{
+    background-color: var(--letra);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--dentro);
+}
+
+
+
+
+
+
+
+
+    
